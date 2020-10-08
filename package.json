@@ -1,0 +1,45 @@
+{
+  "name": "taxione-corporate-frontend",
+  "version": "0.0.1",
+  "description": "A Quasar Framework app",
+  "productName": "Taxione",
+  "cordovaId": "org.cordova.quasar.app",
+  "capacitorId": "",
+  "author": "vladdlab <vladbvv2000@gmail.com>",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js,.vue src",
+    "test": "echo \"No test specified\" && exit 0",
+    "dev": "quasar dev",
+    "build": "quasar build",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:dev": "quasar dev",
+    "start:prod": "node server.js"
+  },
+  "dependencies": {
+    "@quasar/app": "^1.0.0",
+    "@quasar/extras": "^1.0.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "axios": "^0.18.1",
+    "babel-eslint": "^10.0.1",
+    "bonch.dev-quasar-gitlab-ci": "^0.1.4",
+    "eslint": "^5.10.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-vue": "^5.0.0",
+    "google-maps-api-loader": "^1.1.1",
+    "libphonenumber-js": "^1.7.55",
+    "quasar": "^1.0.0",
+    "vue-mj-daterangepicker": "^0.1.10"
+  },
+  "engines": {
+    "node": ">= 10.18.1",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  },
+  "browserslist": [
+    "last 1 version, not dead, ie >= 11"
+  ],
+  "devDependencies": {
+    "vue-the-mask": "^0.11.1"
+  }
+}

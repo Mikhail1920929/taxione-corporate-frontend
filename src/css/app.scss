@@ -1,0 +1,389 @@
+// app global css in SCSS form
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+@font-face {
+    font-family: 'SFProDisplay';
+    src: url(./fonts/SFProDisplay-Regular.woff);
+}
+
+:root {
+  font-size: 1em;
+}
+
+@media (max-width: 1310px) {
+  :root {
+    font-size: calc(1em - 0.2vw);
+  }
+}
+
+@media (min-width: 2000px) {
+  :root {
+    font-size: calc(1em + 0.1vw);
+  }
+}
+
+div.absolute.full-width {
+  display: flex;
+  flex-direction: column;
+}
+
+
+// HIDE ARROWS ON INPUT[NUMBER]
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+.loginInput{
+  margin-bottom: 5px;
+  width: 300px;
+}
+.loginInput span {
+  position: relative;
+  z-index: 6001;
+}
+.loginInput .q-field__control:before{
+  border: solid 1px rgba(0, 0, 0, 0.24);
+  box-shadow: inset 0px 2px 4px 0px rgba(185,191,221,0.35);
+}
+.loginInput .q-field__control:hover:before{
+  border: solid 1px #000;
+}
+.loginInput .q-field__native{
+  padding-left: 15px;
+}
+.loginInput .q-field__native::placeholder{
+  color: #b1b3da;
+}
+.loginInput .q-select__dropdown-icon{
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 0px 6px rgba(118, 121, 242, 0.5);
+  color: #fff;
+  position: relative;
+  z-index: 6001;
+}
+.loginInput .q-select__dropdown-icon:after{
+  position: absolute;
+  left: 9px;
+  top: 7px;
+  width: 7px;
+  height: 7px;
+  content: '';
+  border: solid #8184f3;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.loginSelect{
+  margin-top: -23px !important;
+  border-bottom: 2px solid #836af2;
+  border-left: 2px solid #836af2;
+  border-right: 2px solid #836af2;
+  padding: 30px 0 15px 0;
+  background-color: #fff;
+  border-radius: 0 0 30px 30px;
+  box-shadow: none;
+}
+.loginSelect .q-virtual-scroll__content{
+  padding: 0 16px;
+  color: #b1b3da;
+}
+.loginSelect .q-focus-helper{
+  background-color: #f7f7ff !important;
+  color: #222734 !important;
+  border-radius: 7px !important;
+}
+
+.q-field--auto-height .q-field__native,
+.q-field--auto-height .q-field__control {
+  min-height: 45px;
+}
+
+.q-field__native {
+  height: 45px;
+  padding: 0 0.5em;
+}
+.q-field__native::placeholder{
+  color: #bec0e0;
+}
+.settings__input_limit input.q-field__native {
+  text-align: center
+}
+.q-field__append {
+  height: 45px;
+}
+div.q-field__control {
+  height: 45px;
+}
+
+.disable_limit input {
+  color: rgb(177, 179, 218);
+}
+
+.settingsSelect__onBase{
+  max-width: 300px !important;
+  padding-bottom: 0;
+}
+
+.settingsSelect__onBase span {
+  position: relative;
+  z-index: 6000;
+}
+
+.settingsSelect__onBase .q-select__dropdown-icon{
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 0px 6px rgba(118, 121, 242, 0.5);
+  color: #fff;
+  position: relative;
+  z-index: 6000;
+}
+.settingsSelect__onBase .q-select__dropdown-icon:after{
+  position: absolute;
+  left: 9px;
+  top: 7px;
+  width: 7px;
+  height: 7px;
+  content: '';
+  border: solid #8184f3;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.settingSelect__onBase{
+  margin-top: -23px !important;
+  border-bottom: 2px solid #836af2;
+  border-left: 2px solid #836af2;
+  border-right: 2px solid #836af2;
+  padding: 20px 0 5px 0;
+  background-color: #fff;
+  border-radius: 0 0 30px 30px;
+  box-shadow: none;
+  height: 175px;
+  z-index: 5999;
+}
+.settingsSelect__onBase.q-field--error .q-field__append:nth-child(2) {
+  z-index: 6000;
+}
+.settingsSelect__onBase.q-field--error .q-field__append:nth-child(3) {
+  display: none;
+}
+@media (min-width: 885px) and (max-height: 900px) {
+  .settingSelect__onBase{
+    margin-top: 24px !important;
+    margin-left: 0.5px !important;
+    border-top: 2px solid #836af2;
+    border-left: 2px solid #836af2;
+    border-right: 2px solid #836af2;
+    border-bottom: hidden;
+    padding: 15px 0 15px 0;
+    height: 190px;
+    background-color: #fff;
+    border-radius: 30px 30px 0 0;
+    box-shadow: none;
+  }
+}
+.settingSelect__onBase .q-virtual-scroll__content{
+  padding: 0 16px;
+  color: #b1b3da;
+  border-radius: 30px 30px 30px 30px;
+}
+.settingSelect__onBase .q-focus-helper{
+  background-color: #f7f7ff !important;
+  color: #222734 !important;
+  border-radius: 7px !important;
+}
+
+.settingsSelect__taxFrom{
+  max-width: 300px !important;
+  padding-bottom: 0;
+}
+
+.settingsSelect__taxFrom span {
+  position: relative;
+  z-index: 6000;
+}
+
+.settingsSelect__taxFrom .q-select__dropdown-icon{
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 0px 6px rgba(118, 121, 242, 0.5);
+  color: #fff;
+  position: relative;
+  z-index: 6000;
+}
+.settingsSelect__taxFrom .q-select__dropdown-icon:after{
+  position: absolute;
+  left: 9px;
+  top: 7px;
+  width: 7px;
+  height: 7px;
+  content: '';
+  border: solid #8184f3;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.settingSelect__taxFrom{
+  margin-top: -23px !important;
+  border-bottom: 2px solid #836af2;
+  border-left: 2px solid #836af2;
+  border-right: 2px solid #836af2;
+  padding: 20px 0 5px 0;
+  background-color: #fff;
+  border-radius: 0 0 30px 30px;
+  box-shadow: none;
+  height: 175px;
+  z-index: 5999;
+}
+.settingsSelect__taxFrom.q-field--error .q-field__append:nth-child(2) {
+  z-index: 6000;
+}
+.settingsSelect__taxFrom.q-field--error .q-field__append:nth-child(3) {
+  display: none;
+}
+@media (min-width: 885px) and (max-height: 954px) {
+  .settingSelect__taxFrom{
+    margin-top: 24px !important;
+    margin-left: 0.5px !important;
+    border-top: 2px solid #836af2;
+    border-left: 2px solid #836af2;
+    border-right: 2px solid #836af2;
+    border-bottom: hidden;
+    padding: 15px 0 15px 0;
+    background-color: #fff;
+    border-radius: 30px 30px 0 0;
+    height: 185px;
+    box-shadow: none;
+  }
+}
+.settingSelect__taxFrom .q-virtual-scroll__content{
+  padding: 0 16px;
+  color: #b1b3da;
+}
+.settingSelect__taxFrom .q-focus-helper{
+  background-color: #f7f7ff !important;
+  color: #222734 !important;
+  border-radius: 7px !important;
+}
+
+.q-notification__actions {
+  justify-content: center;
+}
+
+.q-notification__content {
+  align-items: baseline;
+}
+.q-date__navigation {
+  background: #f7f7ff !important;
+  border-radius: 10px;
+}
+
+.q-date__navigation > div:nth-child(4) {
+  display: none;
+}
+.q-date__navigation > div:nth-child(5) {
+  display: none;
+}
+.q-date__navigation > div:nth-child(6) {
+  display: none;
+}
+
+.q-date__arrow {
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 7px;
+  &:hover {
+    background: linear-gradient( -150deg, rgb(131,106,242) 0%, rgb(106,135,242) 100%);
+    color: #fff;
+  }
+}
+
+.q-date__calendar-weekdays > .q-date__calendar-item  {
+  opacity: 1;
+}
+.q-date__calendar-item button {
+  border-radius: 15px;
+  height: 25px;
+  margin: 0.15em 0;
+}
+.q-date__calendar-item .q-btn {
+  line-height: 0em !important;
+}
+
+.q-date__calendar-item .q-btn--dense .q-btn__wrapper {
+  padding: 0;
+  min-height: 1em;
+}
+
+.q-date__calendar-days-container {
+  height: 75%;
+  min-height: 75%;
+}
+
+.q-date__view {
+  min-height: 100%;
+}
+
+.fakePhoneInput input {
+  cursor: pointer !important;
+}
+
+.header__phone .fakePhoneInput {
+  height: 0.9em;
+  width: 170px;
+}
+.header__phone .fakePhoneInput input {
+  height: 0.9em;
+  font-weight: bold;
+  padding-left: 1.7em;
+  width: 100%;
+}
+
+.item__user .fakePhoneInput {
+  margin-left: -0.4em;
+  // margin-bottom: -0.6em;
+}
+
+.item__user .fakePhoneInput input {
+  height: 1.2rem;
+  cursor: default !important;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.8575em;
+  color: #d0cee1;
+}
+
+.item__user .fakePhoneInput .q-field__control-container {
+  height: 1.2rem;
+}
+
+.item__user .fakePhoneInput .q-field__control {
+  height: 1.2rem;
+}
+
+@media not all and (min-resolution:.001dpcm)
+{ .item__user .fakePhoneInput {
+  margin-top: -0.4em;
+  margin-bottom: 0.2em;
+}}
+
+.settings__input .q-field__inner {
+  height: 45px !important;
+}
+
+.settings__input .q-field__control {
+  height: 45px !important;
+}
